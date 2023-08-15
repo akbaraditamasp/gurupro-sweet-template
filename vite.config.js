@@ -8,4 +8,11 @@ export default defineConfig({
   ssr: {
     noExternal: ["react-icons"],
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
 });
