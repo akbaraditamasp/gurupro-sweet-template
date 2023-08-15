@@ -1,5 +1,6 @@
 import axios from "axios";
 import Home from "./pages/Home";
+import Layout from "./pages/Layout";
 
 const routes = [
   {
@@ -10,13 +11,20 @@ const routes = [
         ? { ...context.data, url: context.url }
         : await axios
             .get(
-              "https://api.gurupro.id/api/micro/subdomain?subdomain=code-with-akbar.gurupro.id"
+              "https://api.gurupro.id/api/micro/subdomain?subdomain=ngin-academy.gurupro.id"
             )
             .then((response) => response.data);
 
       return data;
     },
-    element: <Home />,
+    element: <Layout />,
+    children: [
+      {
+        path: "",
+        index: true,
+        element: <Home />,
+      },
+    ],
   },
 ];
 
