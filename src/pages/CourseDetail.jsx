@@ -74,11 +74,14 @@ export default function CourseDetail() {
             ) : null}
           </div>
           <a
-            href="/"
+            href={
+              "https://app.gurupro.id/main/ecourse/course-detail/" + data.id
+            }
+            title={"Ikuti Kursus " + data.name}
             className="py-3 px-5 rounded mt-8 w-full hidden lg:block text-white text-center"
             style={{ backgroundColor: rootData.variables.color }}
           >
-            Gabung Kursus
+            Ikuti Kursus
           </a>
         </div>
       </Container>
@@ -145,11 +148,12 @@ export default function CourseDetail() {
       </Container>
       <Container containerClassName="flex lg:hidden bg-gray-100 -mt-6 sticky bottom-0 py-3">
         <a
-          href="/"
+          href={"https://app.gurupro.id/main/ecourse/course-detail/" + data.id}
+          title={"Ikuti Kursus " + data.name}
           className="py-3 px-5 rounded w-full block text-white text-center"
           style={{ backgroundColor: rootData.variables.color }}
         >
-          Gabung Kursus
+          Ikuti Kursus
         </a>
       </Container>
     </div>
