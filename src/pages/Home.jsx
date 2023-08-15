@@ -94,7 +94,7 @@ export default function Home() {
           </div>
           <Link
             className="block w-36 lg:w-40 relative overflow-hidden rounded-full py-3 text-center text-white mt-12 group"
-            to="/"
+            to="/courses"
             style={{ backgroundColor: rootData.variables.color }}
           >
             <span className="bg-black absolute top-0 left-0 w-full h-full bg-opacity-0 group-hover:bg-opacity-20" />
@@ -169,7 +169,7 @@ export default function Home() {
           #Learn
         </div>
         <h3 className="text-xl lg:text-3xl font-bold font-kanit text-gray-800 mt-1 mb-8">
-          Kelas Unggulan
+          Kursus Unggulan
         </h3>
         <div className="grid grid-flow-row grid-cols-1 lg:grid-cols-4 gap-5">
           {rootData.user.courses?.map((item, index) => (
@@ -224,7 +224,7 @@ export default function Home() {
               <Link
                 to={`/course/${slugify(item.name)}-${encodeNumberToLowerCase(
                   `${item.id}`
-                )}}`}
+                )}`}
                 title={item.name}
                 className="absolute top-0 left-0 rounded w-full h-full opacity-0"
               >
@@ -307,7 +307,9 @@ export default function Home() {
               </div>
               <div className="line-clamp-3 text-justify mt-2">{item.body}</div>
               <Link
-                to="/"
+                to={`/article/${slugify(item.title)}-${encodeNumberToLowerCase(
+                  `${item.id}`
+                )}`}
                 className="absolute top-0 left-0 w-full h-full rounded opacity-0"
                 title={item.title}
               >

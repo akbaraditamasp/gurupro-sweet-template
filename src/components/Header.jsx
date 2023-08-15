@@ -48,7 +48,8 @@ export default function Header() {
           </li>
           <li className="h-full w-full lg:w-auto">
             <Link
-              to="/"
+              to="/courses"
+              title="Kursus"
               className="h-full py-3 lg:py-0 px-5 flex justify-start lg:justify-center items-center hover:bg-gray-200"
             >
               Kursus
@@ -56,7 +57,8 @@ export default function Header() {
           </li>
           <li className="h-full w-full lg:w-auto">
             <Link
-              to="/"
+              to="/articles"
+              title="Artikel"
               className="h-full py-3 lg:py-0 px-5 flex justify-start lg:justify-center items-center hover:bg-gray-200"
             >
               Artikel
