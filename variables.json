@@ -1,0 +1,7 @@
+{
+  "title": {
+    "label": "Judul",
+    "rules": "required",
+    "type": "textarea"
+  }
+}
