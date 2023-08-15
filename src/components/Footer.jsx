@@ -28,7 +28,7 @@ export default function Footer() {
         </div>
         <div className="mt-5 lg:mt-0 flex flex-col items-start lg:items-end">
           <h4 className="font-bold text-gray-800 font-kanit mb-3">
-            Ikuti Kami
+            Ikuti di Sosial Media
           </h4>
           <div className="flex justify-start lg:justify-end items-center space-x-3">
             {rootData.variables?.socials?.map((item, index) => {

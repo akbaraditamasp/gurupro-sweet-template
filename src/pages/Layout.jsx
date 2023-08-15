@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import Header from "../components/Header";
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import Footer from "../components/Footer";
 
 export default function Layout() {
@@ -9,6 +9,7 @@ export default function Layout() {
       <Header />
       <Outlet />
       <Footer />
+      <ScrollRestoration />
     </Fragment>
   );
 }

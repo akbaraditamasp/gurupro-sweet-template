@@ -6,6 +6,7 @@ import { ReactComponent as Background } from "../assets/Background.svg";
 import Container from "../components/Container";
 import QuestionList from "../components/QuestionList";
 import { Helmet } from "react-helmet-async";
+import { encodeNumberToLowerCase, slugify } from "../slugify";
 
 export default function Home() {
   const rootData = useRouteLoaderData("root");
@@ -60,8 +61,8 @@ export default function Home() {
         className="flex flex-col lg:flex-row justify-center items-stretch space-y-5 lg:space-y-0 space-x-0 lg:space-x-8"
       >
         <img
-          alt={"Kembangkan Kemampuan Anda Bersama " + rootData.variables.name}
-          title={"Kembangkan Kemampuan Anda Bersama " + rootData.variables.name}
+          alt={"Kembangkan Kemampuan Anda"}
+          title={"Kembangkan Kemampuan Anda"}
           src={rootData.variables.hook_image}
           className="w-full lg:w-1/2 h-auto"
         />
@@ -73,7 +74,7 @@ export default function Home() {
             #GrowthYourSkill
           </div>
           <h3 className="text-xl lg:text-3xl font-bold font-kanit text-gray-800 mb-5">
-            Kembangkan Kemampuan Anda Bersama Kami
+            Kembangkan Kemampuan Anda Sekarang Juga!
           </h3>
           <div className="flex flex-col justify-start space-y-4">
             {rootData.variables.benefit?.map((item, index) => (
@@ -168,7 +169,7 @@ export default function Home() {
           #Learn
         </div>
         <h3 className="text-xl lg:text-3xl font-bold font-kanit text-gray-800 mt-1 mb-8">
-          Kelas Unggulan Kami
+          Kelas Unggulan
         </h3>
         <div className="grid grid-flow-row grid-cols-1 lg:grid-cols-4 gap-5">
           {rootData.user.courses?.map((item, index) => (
@@ -221,7 +222,9 @@ export default function Home() {
                 ) : null}
               </div>
               <Link
-                to="/"
+                to={`/course/${slugify(item.name)}-${encodeNumberToLowerCase(
+                  `${item.id}`
+                )}}`}
                 title={item.name}
                 className="absolute top-0 left-0 rounded w-full h-full opacity-0"
               >
@@ -243,10 +246,10 @@ export default function Home() {
             Trusted By 900K+ Students
           </div>
           <h3 className="text-xl lg:text-3xl text-center lg:text-left text-white font-bold font-kanit">
-            Apa Kata Mereka Tentang Kami
+            Apa yang Mereka Katakan
           </h3>
           <div className="text-gray-200 text-sm lg:text-base text-center lg:text-left">
-            Dengarkan testimoni dari beberapa siswa kami berikut ini
+            Dengarkan testimoni dari beberapa siswa yang telah ikut bergabung
           </div>
         </div>
         <div className="w-auto lg:w-1/3 static lg:absolute top-0 right-0 flex flex-row lg:flex-col items-stretch lg:items-start space-x-5 lg:space-x-0 space-y-0 lg:space-y-5 animate-scroll-horizontal lg:animate-scroll-vertical">
