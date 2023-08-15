@@ -1,7 +1,172 @@
 {
+  "color": {
+    "label": "Warna",
+    "rules": "required",
+    "type": "color_picker"
+  },
+  "logo": {
+    "label": "Logo",
+    "rules": "required",
+    "type": "upload"
+  },
+  "name": {
+    "label": "nama",
+    "rules": "required",
+    "type": "text_input"
+  },
   "title": {
     "label": "Judul",
     "rules": "required",
     "type": "textarea"
+  },
+  "subtitle": {
+    "label": "Sub Judul",
+    "rules": "required",
+    "type": "textarea"
+  },
+  "model": {
+    "label": "Model Header",
+    "rules": "required",
+    "type": "upload"
+  },
+  "partners": {
+    "label": "Partner",
+    "type": "array",
+    "rules": "required",
+    "member": {
+      "logo": {
+        "label": "Logo",
+        "rules": "required",
+        "type": "upload"
+      },
+      "name": {
+        "label": "nama",
+        "rules": "required",
+        "type": "text_input"
+      }
+    }
+  },
+  "hook_image": {
+    "label": "Gambar Pembuka",
+    "rules": "required",
+    "type": "upload"
+  },
+  "benefit": {
+    "label": "Manfaat",
+    "type": "array",
+    "rules": "required",
+    "member": {
+      "text": {
+        "label": "Teks",
+        "rules": "required",
+        "type": "text_input"
+      }
+    }
+  },
+  "cores": {
+    "label": "Apa Yang Dipelajari",
+    "type": "array",
+    "rules": "required",
+    "member": {
+      "name": {
+        "label": "Nama",
+        "rules": "required",
+        "type": "text_input"
+      },
+      "desc": {
+        "label": "Keterangan",
+        "rules": "required",
+        "type": "text_input"
+      },
+      "icon": {
+        "label": "Icon",
+        "rules": "required",
+        "type": "upload"
+      }
+    }
+  },
+  "testimonials": {
+    "label": "Testimoni",
+    "type": "array",
+    "rules": "required",
+    "member": {
+      "name": {
+        "label": "Nama",
+        "rules": "required",
+        "type": "text_input"
+      },
+      "job": {
+        "label": "Pekerjaan",
+        "rules": "required",
+        "type": "text_input"
+      },
+      "photo": {
+        "label": "Foto",
+        "rules": "required",
+        "type": "upload"
+      },
+      "body": {
+        "label": "Isi",
+        "rules": "required",
+        "type": "textarea"
+      }
+    }
+  },
+  "faqs": {
+    "label": "FAQs",
+    "type": "array",
+    "rules": "required",
+    "member": {
+      "ask": {
+        "label": "Pertanyaan",
+        "rules": "required",
+        "type": "textarea"
+      },
+      "question": {
+        "label": "Jawaban",
+        "rules": "required",
+        "type": "textarea"
+      }
+    }
+  },
+  "address": {
+    "label": "Alamat",
+    "rules": "required",
+    "type": "textarea"
+  },
+  "socials": {
+    "label": "Sosial Media",
+    "type": "array",
+    "rules": "required",
+    "member": {
+      "name": {
+        "label": "Jenis",
+        "type": "enum",
+        "required": "true",
+        "options": [
+          {
+            "value": "Facebook",
+            "label": "Facebook"
+          },
+          {
+            "value": "Instagram",
+            "label": "Instagram"
+          },
+          {
+            "value": "Youtube",
+            "label": "Youtube"
+          },
+          {
+            "value": "Twitter",
+            "label": "Twitter"
+          }
+        ]
+      },
+      "url": {
+        "label": "URL",
+        "rules": "required",
+        "type": "text_input"
+      }
+    }
   }
 }
