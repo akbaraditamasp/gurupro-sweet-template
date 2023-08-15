@@ -19,7 +19,10 @@ export default function Footer() {
             alt={rootData.variables.name}
             src={rootData.variables.logo}
           />
-          <div className="mt-5" style={{ whiteSpace: "pre-wrap" }}>
+          <div
+            className="mt-5 text-sm lg:text-base"
+            style={{ whiteSpace: "pre-wrap" }}
+          >
             {rootData.variables.address}
           </div>
         </div>
@@ -41,10 +44,11 @@ export default function Footer() {
                 ];
               return (
                 <a
+                  key={`${index}`}
                   href="/"
                   title={item.name}
                   style={{ backgroundColor: rootData.variables.color }}
-                  className="w-8 h-8 rounded-full flex justify-center items-center"
+                  className="w-10 h-10 rounded-full flex justify-center items-center"
                 >
                   <SocialIcon className="text-white" />
                 </a>
@@ -55,7 +59,7 @@ export default function Footer() {
       </Container>
       <Container
         className="py-5"
-        containerClassName="bg-gray-500 text-white text-sm lg:text-base"
+        containerClassName="bg-gray-500 text-white text-sm lg:text-base text-center lg:text-left"
       >
         &copy;2023 Powered by GuruPRO, All Rights Reserved
       </Container>

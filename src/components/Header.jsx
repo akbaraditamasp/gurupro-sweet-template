@@ -5,7 +5,7 @@ import { RiCloseFill, RiMenuFill } from "react-icons/ri";
 
 export default function Header() {
   const rootData = useRouteLoaderData("root");
-  const [showMenu, setShowMenu] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
 
   return (
     <Container

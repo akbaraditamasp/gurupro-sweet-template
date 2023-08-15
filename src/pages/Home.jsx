@@ -5,11 +5,21 @@ import { Link, useRouteLoaderData } from "react-router-dom";
 import { ReactComponent as Background } from "../assets/Background.svg";
 import Container from "../components/Container";
 import QuestionList from "../components/QuestionList";
+import { Helmet } from "react-helmet-async";
 
 export default function Home() {
   const rootData = useRouteLoaderData("root");
   return (
     <Fragment>
+      <Helmet>
+        <title>{rootData.variables.title}</title>
+        <meta name="description" content={rootData.variables.subtitle} />
+        <meta property="og:image" content={rootData.variables.logo} />
+        <meta property="og:description" content={rootData.variables.subtitle} />
+        <meta property="og:title" content={rootData.variables.title} />
+        <meta property="og:url" content={rootData.url} />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <Container
         containerClassName="relative overflow-hidden"
         containerProps={{
