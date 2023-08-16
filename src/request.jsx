@@ -1,5 +1,5 @@
 export default function createFetchRequest(req) {
-  let origin = `${req.protocol}://${req.get("host")}`;
+  let origin = `https://${req.get("host")}`;
   // Note: This had to take originalUrl into account for presumably vite's proxying
   let url = new URL(req.originalUrl || req.url, origin);
 
