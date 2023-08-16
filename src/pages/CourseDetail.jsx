@@ -46,6 +46,8 @@ export default function CourseDetail() {
           >
             <img
               src={data.banner}
+              alt={data.name}
+              title={data.name}
               className="w-full h-full absolute top-0 left-0 object-cover"
             />
           </div>

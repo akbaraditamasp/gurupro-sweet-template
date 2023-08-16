@@ -60,7 +60,7 @@ export default function Articles() {
                   className="w-full h-full absolute top-0 left-0 object-cover opacity-100 group-hover:opacity-70"
                 />
               </div>
-              <div className="font-bold text-gray-800 font-kanit mt-2 line-clamp-2 text-justify text-lg">
+              <div className="font-bold text-gray-800 font-kanit mt-2 line-clamp-2 text-lg">
                 {item.title}
               </div>
               <div className="line-clamp-3 text-justify mt-2">{item.body}</div>
