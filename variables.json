@@ -4,6 +4,11 @@
     "rules": "required",
     "type": "color_picker"
   },
+  "favicon": {
+    "label": "Favicon",
+    "rules": "required",
+    "type": "upload"
+  },
   "logo": {
     "label": "Logo",
     "rules": "required",

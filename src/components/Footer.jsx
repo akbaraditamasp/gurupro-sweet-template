@@ -45,7 +45,8 @@ export default function Footer() {
               return (
                 <a
                   key={`${index}`}
-                  href="/"
+                  href={item.url}
+                  target="_blank"
                   title={item.name}
                   style={{ backgroundColor: rootData.variables.color }}
                   className="w-10 h-10 rounded-full flex justify-center items-center"
