@@ -35,7 +35,7 @@ export default function CourseDetail() {
         <meta property="og:type" content="website" />
       </Helmet>
       <Container
-        containerClassName="static lg:absolute top-0 left-0 right-0 bottom-0 pt-28 lg:pt-20 lg:pb-12 pointer-events-none bg-gray-800 lg:bg-transparent"
+        containerClassName="static lg:absolute top-0 left-0 right-0 bottom-8 pt-28 lg:pt-20 pointer-events-none bg-gray-800 lg:bg-transparent pb-0.5"
         className="static lg:relative flex items-start"
       >
         <div className="hidden lg:block w-2/3" />
@@ -139,14 +139,14 @@ export default function CourseDetail() {
         </div>
       </Container>
       <Container containerClassName="bg-gray-100">
-        <div className="w-full lg:w-2/3 py-8 px-0 lg:pr-8">
+        <div className="w-full lg:w-2/3 pt-8 px-0 lg:pr-8">
           <div
             className="border bg-white rounded p-5 prose max-w-full"
             dangerouslySetInnerHTML={{ __html: data.description }}
           />
         </div>
       </Container>
-      <Container containerClassName="flex lg:hidden bg-gray-100 -mt-6 sticky bottom-0 py-3">
+      <Container containerClassName="flex lg:hidden bg-gray-100 sticky bottom-0 py-3">
         <a
           href={"https://app.gurupro.id/main/ecourse/course-detail/" + data.id}
           title={"Ikuti Kursus " + data.name}

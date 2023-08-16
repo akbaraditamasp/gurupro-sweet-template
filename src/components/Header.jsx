@@ -12,7 +12,7 @@ export default function Header() {
       containerClassName="fixed top-0 left-0 w-full bg-white h-20 border-b shadow-sm z-10"
       className="flex justify-between items-center bg-white"
     >
-      <Link to="/" title={rootData.variables.name}>
+      <Link to="/" title={rootData.variables.name} className="p-3 px-12 -ml-12">
         <img
           className="h-8 w-auto"
           title={rootData.variables.name}
@@ -32,7 +32,7 @@ export default function Header() {
         )}
       </button>
       <nav
-        className={`h-auto lg:h-full absolute lg:static top-0 left-0 w-full bg-white lg:bg-transparent transition duration-1000 -z-10 lg:z-0 transform ${
+        className={`h-auto lg:h-full absolute lg:static top-0 left-0 w-full bg-white lg:bg-transparent ml-0 lg:ml-3 transition duration-1000 -z-10 lg:z-0 transform ${
           showMenu ? "translate-y-20" : "-translate-y-full"
         } lg:translate-y-0`}
       >
