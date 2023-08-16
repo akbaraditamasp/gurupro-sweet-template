@@ -29,7 +29,7 @@ export default function Home() {
           },
         }}
       >
-        <Background className="w-auto h-[80%] lg:h-[150%] absolute top-1/2 lg:top-[60%] right-0 lg:-right-56 transform translate-y-0 lg:-translate-y-1/2 translate-x-1/4 lg:translate-x-0 opacity-30" />
+        <Background className="w-auto h-[80%] lg:h-[150%] absolute top-1/2 lg:top-[60%] right-0 lg:-right-56 transform translate-y-0 lg:-translate-y-1/2 translate-x-1/4 lg:translate-x-0 opacity-25" />
         <img
           src={rootData.variables.model}
           title={rootData.variables.title}
@@ -171,7 +171,7 @@ export default function Home() {
         <h3 className="text-xl lg:text-3xl font-bold font-kanit text-gray-800 mt-1 mb-8">
           Kursus Unggulan
         </h3>
-        <div className="grid grid-flow-row grid-cols-1 lg:grid-cols-4 gap-5">
+        <div className="grid grid-flow-row grid-cols-1 lg:grid-cols-4 gap-8">
           {rootData.user.courses?.map((item, index) => (
             <div
               className="flex flex-col group transition duration-300 relative"
@@ -285,7 +285,7 @@ export default function Home() {
         <h3 className="text-xl lg:text-3xl font-bold font-kanit text-gray-800 mt-1 mb-8">
           Baca Artikel Terbaru
         </h3>
-        <div className="grid grid-flow-row grid-cols-1 lg:grid-cols-4 gap-5">
+        <div className="grid grid-flow-row grid-cols-1 lg:grid-cols-4 gap-8">
           {rootData.user.articles?.map((item, index) => (
             <div className="flex flex-col relative group" key={`${index}`}>
               <div

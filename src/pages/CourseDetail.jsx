@@ -143,7 +143,7 @@ export default function CourseDetail() {
       <Container containerClassName="bg-gray-100">
         <div className="w-full lg:w-2/3 pt-8 px-0 lg:pr-8">
           <div
-            className="border bg-white rounded p-5 prose max-w-full"
+            className="border bg-white rounded p-5 prose text-justify max-w-full"
             dangerouslySetInnerHTML={{ __html: data.description }}
           />
         </div>

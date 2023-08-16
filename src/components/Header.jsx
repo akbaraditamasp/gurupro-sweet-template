@@ -12,7 +12,11 @@ export default function Header() {
       containerClassName="fixed top-0 left-0 w-full bg-white h-20 border-b shadow-sm z-10"
       className="flex justify-between items-center bg-white"
     >
-      <Link to="/" title={rootData.variables.name} className="p-3 px-12 -ml-12">
+      <Link
+        to="/"
+        title={rootData.variables.name}
+        className="p-3 px-12 -ml-12 flex-shrink-0"
+      >
         <img
           className="h-8 w-auto"
           title={rootData.variables.name}
