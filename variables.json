@@ -15,7 +15,7 @@
     "type": "upload"
   },
   "name": {
-    "label": "nama",
+    "label": "Nama",
     "rules": "required",
     "type": "text_input"
   },
@@ -30,7 +30,7 @@
     "type": "textarea"
   },
   "model": {
-    "label": "Model Header",
+    "label": "Gambar Header: (Rekomendasi 1000x1000)",
     "rules": "required",
     "type": "upload"
   },
@@ -45,14 +45,14 @@
         "type": "upload"
       },
       "name": {
-        "label": "nama",
+        "label": "Nama",
         "rules": "required",
         "type": "text_input"
       }
     }
   },
   "hook_image": {
-    "label": "Gambar Pembuka",
+    "label": "Gambar Pembuka (Rekomendasi 1000x670)",
     "rules": "required",
     "type": "upload"
   },
