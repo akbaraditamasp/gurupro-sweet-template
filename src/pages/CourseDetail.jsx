@@ -24,6 +24,7 @@ export default function CourseDetail() {
 
   const makePayment = (form) => {
     setLoading(true);
+
     axios
       .post("https://api.gurupro.id/api/purchase/course/" + data.id, form)
       .then((response) => {
@@ -260,11 +261,13 @@ export default function CourseDetail() {
             style={{ backgroundColor: rootData.variables.color }}
             disabled={loading}
             onClick={() => {
-              fbq("track", "Purchase", {
-                currency: "IDR",
+              fbq("track", "AddToCart", {
+                content_ids: [`${data.id}`],
+                content_type: "product",
                 value: data.discount
                   ? data.price - (data.discount / 100) * data.price
                   : data.price,
+                currency: "IDR",
               });
             }}
           >
