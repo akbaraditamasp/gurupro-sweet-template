@@ -173,5 +173,9 @@
         "type": "text_input"
       }
     }
+  },
+  "pixel_id": {
+    "label": "Pixel ID",
+    "type": "text_input"
   }
 }

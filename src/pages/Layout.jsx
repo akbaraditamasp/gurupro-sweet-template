@@ -1,8 +1,9 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import Header from "../components/Header";
 import {
   Outlet,
   ScrollRestoration,
+  useLocation,
   useRouteLoaderData,
 } from "react-router-dom";
 import Footer from "../components/Footer";
@@ -10,6 +11,16 @@ import { Helmet } from "react-helmet-async";
 
 export default function Layout() {
   const rootData = useRouteLoaderData("root");
+  const location = useLocation();
+
+  useEffect(() => {
+    fbq("init", rootData.variables.pixel_id);
+  }, []);
+
+  useEffect(() => {
+    fbq("track", "PageView");
+  }, [location]);
+
   return (
     <Fragment>
       <Helmet>
