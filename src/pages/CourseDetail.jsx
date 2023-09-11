@@ -259,6 +259,14 @@ export default function CourseDetail() {
             className="py-3 px-5 rounded w-full block text-white text-center"
             style={{ backgroundColor: rootData.variables.color }}
             disabled={loading}
+            onClick={() => {
+              fbq("track", "Purchase", {
+                currency: "IDR",
+                value: data.discount
+                  ? data.price - (data.discount / 100) * data.price
+                  : data.price,
+              });
+            }}
           >
             {loading ? "Tunggu..." : "Lanjutkan"}
           </button>
